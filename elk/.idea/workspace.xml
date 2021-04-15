@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DefaultGradleProjectSettings">
+    <option name="isMigrated" value="true" />
+  </component>
+  <component name="GradleLocalSettings">
+    <option name="projectSyncType">
+      <map>
+        <entry key="$PROJECT_DIR$/../../Chatting" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../../../workspace-sts-3.9.5.RELEASE/DirectChannal" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../../../workspace-sts-3.9.5.RELEASE/DirectChannel" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../../../workspace-sts-3.9.5.RELEASE/KC.DirectChannel" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../../../workspace-sts-3.9.5.RELEASE/SampleFileUpload" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../../../workspace-sts-3.9.5.RELEASE/SpringBootTest" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../../../workspace-sts-3.9.5.RELEASE/binjin-admin" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../../../workspace-sts-3.9.5.RELEASE/bonjin" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../../../workspace-sts-3.9.5.RELEASE/bonjin-admin" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../../../workspace-sts-3.9.5.RELEASE/idol-admin" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../../../workspace-sts-3.9.5.RELEASE/jpashop-new" value="PREVIEW" />
+        <entry key="$USER_HOME$/Downloads/BugServer-master" value="PREVIEW" />
+        <entry key="$USER_HOME$/Downloads/Chatting-aa21c55027ccbd2d295cc024eeca9dc003133cc8" value="PREVIEW" />
+        <entry key="$USER_HOME$/Downloads/SpringBootSample-master 2" value="PREVIEW" />
+        <entry key="$USER_HOME$/Downloads/SpringBootSample-master/SpringBootSecurityJwt" value="PREVIEW" />
+        <entry key="$USER_HOME$/Downloads/api-v2-develop/ibksbMapi" value="PREVIEW" />
+        <entry key="$USER_HOME$/Downloads/ch08" value="PREVIEW" />
+        <entry key="$USER_HOME$/Downloads/examples-master/thymeleafExample" value="PREVIEW" />
+        <entry key="$USER_HOME$/Downloads/freelec-springboot2-webservice-master" value="PREVIEW" />
+        <entry key="$USER_HOME$/Downloads/querydsl-master" value="PREVIEW" />
+        <entry key="$USER_HOME$/Downloads/spring-integration-samples-master" value="PREVIEW" />
+        <entry key="$USER_HOME$/Downloads/spring-security-5.1.5.RELEASE" value="PREVIEW" />
+        <entry key="$USER_HOME$/Downloads/websocket-chat-server-feature-developchatroom" value="PREVIEW" />
+        <entry key="$USER_HOME$/Downloads/websocket-chat-server-feature-security" value="PREVIEW" />
+        <entry key="$USER_HOME$/Downloads/websocket-chat-server-feature-stomp" value="PREVIEW" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="2607" />
+    <option name="y" value="25" />
+    <option name="width" value="1745" />
+    <option name="height" value="1336" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.annotationProcessors" />
+    <property name="show.migrate.to.gradle.popup" value="false" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="ElkApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="elk.main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="kr.co.bonjin.elk.ElkApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration>$USER_HOME$/.subversion</configuration>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArquillianSettingsConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="Copyright.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.7</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.8.0_212</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>
