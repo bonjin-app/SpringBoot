@@ -13,6 +13,9 @@ repositories {
 }
 
 dependencies {
+
+    implementation 'net.logstash.logback:logstash-logback-encoder:4.11'
+
     implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
     implementation 'org.springframework.boot:spring-boot-starter-web'
     developmentOnly 'org.springframework.boot:spring-boot-devtools'
