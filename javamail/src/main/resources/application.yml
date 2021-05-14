@@ -1,0 +1,19 @@
+spring:
+  # ===============================
+  # = Email Config
+  # // gmail smtp.gmail.com -> https://myaccount.google.com/lesssecureapps 보안 수준이 낮은 앱의 액세스 허용하기.
+  # ===============================
+  mail:
+    host: smtp.gmail.com
+    # 465 또는 587
+    port: 587
+    # id
+    username: username
+    # password
+    password: password
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true

@@ -1,0 +1,32 @@
+plugins {
+    id 'org.springframework.boot' version '2.4.5'
+    id 'io.spring.dependency-management' version '1.0.11.RELEASE'
+    id 'java'
+}
+
+group = 'kr.co.bonjin'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '1.8'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+
+    // WEB - MVC, Tomcat, Jackson
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+
+    /// Mail
+    implementation 'org.springframework.boot:spring-boot-starter-mail'
+
+    // VIEW - Thymeleaf
+    implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
+
+
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+}
+
+test {
+    useJUnitPlatform()
+}
