@@ -7,6 +7,7 @@
 - Slack에 추가.
 
 
+
 1. Application YML
   - slack.webhook-url: 발급받은 webhook-url 입력.
 
