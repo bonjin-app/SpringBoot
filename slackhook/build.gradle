@@ -19,7 +19,9 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-web'
 
     // SLACK - Client
-    implementation 'com.slack.api:slack-api-client:1.8.1'
+    implementation 'com.slack.api:slack-api-client:1.6.2'
+    // HTTP - okhttp
+    implementation 'com.squareup.okhttp3:okhttp:4.2.0'
 
     developmentOnly 'org.springframework.boot:spring-boot-devtools'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
