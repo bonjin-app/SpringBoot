@@ -23,11 +23,13 @@ public class SlackEventListener {
     void doSomethingAfterStartup() {
         logger.info("doSomethingAfterStartup");
 
-
+        slackService.sendMessage("[APPLICATION_STARTED]");
     }
 
     @EventListener(ApplicationFailedEvent.class)
     void doSomethingAfterFailure() {
         logger.info("doSomethingAfterFailure");
+
+        slackService.sendMessage("[APPLICATION_FAILED]");
     }
 }

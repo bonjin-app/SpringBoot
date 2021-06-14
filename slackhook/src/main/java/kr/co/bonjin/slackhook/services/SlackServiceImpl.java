@@ -3,7 +3,8 @@ package kr.co.bonjin.slackhook.services;
 import com.slack.api.Slack;
 import com.slack.api.webhook.Payload;
 import com.slack.api.webhook.WebhookResponse;
-import kr.co.bonjin.slackhook.enums.SlackMessageLevel;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
@@ -12,39 +13,35 @@ import java.io.IOException;
 
 @Service
 public class SlackServiceImpl implements SlackService {
+    private static Logger logger = LoggerFactory.getLogger(SlackServiceImpl.class);
 
-    @Value("${slack.webhook-url.info}")
-    private String INFO;
-
-    @Value("${slack.webhook-url.warn}")
-    private String WARN;
-
-    @Value("${slack.webhook-url.error}")
-    private String ERROR;
+    @Value("${slack.webhook-url}")
+    private String WEBHOOK_URL;
 
     public SlackServiceImpl() {}
 
     @PostConstruct
     public void init() {
-        System.out.println("INFO = " + INFO);
-        System.out.println("WARN = " + WARN);
-        System.out.println("ERROR = " + ERROR);
+        logger.info("SlackServiceImpl init");
+        System.out.println("WEBHOOK_URL = " + WEBHOOK_URL);
     }
 
     @Override
     public void sendMessage(String text) {
-        Slack slack = Slack.getInstance();
-
-        Payload payload = Payload.builder()
-                .text(text)
-//                .username("Slack WebHook Bot")  // default: incoming-webhook
-//                .iconUrl("https://a.slack-edge.com/80588/img/icons/app-57.png")
-//                .iconUrl("/images/n2soft-logo.png")
-//                .iconEmoji(":ghost:")
-                .build();
+        logger.info("SlackServiceImpl sendMessage: {}", text);
 
         try {
-            WebhookResponse response = slack.send(INFO, payload);
+            // create slack message
+            Slack slack = Slack.getInstance();
+
+            Payload payload = Payload.builder()
+                    .text(text)
+                    .username("Slack WebHook Bot")  // default: incoming-webhook
+                    .iconUrl("https://bonjin.co.kr/bonjin/images/n2soft-logo.png")
+//                  .iconEmoji(":ghost:")
+                    .build();
+
+            WebhookResponse response = slack.send(WEBHOOK_URL, payload);
             System.out.println(response);
 
         } catch (IOException e) {

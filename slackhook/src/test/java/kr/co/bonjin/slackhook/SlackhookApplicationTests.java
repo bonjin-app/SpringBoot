@@ -1,6 +1,5 @@
 package kr.co.bonjin.slackhook;
 
-import kr.co.bonjin.slackhook.enums.SlackMessageLevel;
 import kr.co.bonjin.slackhook.services.SlackService;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,7 +13,6 @@ class SlackhookApplicationTests {
 
     @Test
     void contextLoads() {
-        slackService.sendMessage("Slack 테스트 입니당.");
+//        slackService.sendMessage("Slack 테스트 입니당.");
     }
-
 }
