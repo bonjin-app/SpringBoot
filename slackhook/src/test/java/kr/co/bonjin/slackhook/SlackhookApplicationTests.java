@@ -14,7 +14,7 @@ class SlackhookApplicationTests {
 
     @Test
     void contextLoads() {
-        slackService.sendMessage(SlackMessageLevel.INFO);
+        slackService.sendMessage("Slack 테스트 입니당.");
     }
 
 }

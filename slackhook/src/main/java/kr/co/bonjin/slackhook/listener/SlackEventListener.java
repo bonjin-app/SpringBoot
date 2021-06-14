@@ -22,6 +22,8 @@ public class SlackEventListener {
     @EventListener(ApplicationReadyEvent.class)
     void doSomethingAfterStartup() {
         logger.info("doSomethingAfterStartup");
+
+
     }
 
     @EventListener(ApplicationFailedEvent.class)

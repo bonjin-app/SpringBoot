@@ -5,12 +5,10 @@ import com.slack.api.webhook.Payload;
 import com.slack.api.webhook.WebhookResponse;
 import kr.co.bonjin.slackhook.enums.SlackMessageLevel;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.PostConstruct;
 import java.io.IOException;
-import java.util.Map;
 
 @Service
 public class SlackServiceImpl implements SlackService {
@@ -34,33 +32,23 @@ public class SlackServiceImpl implements SlackService {
     }
 
     @Override
-    public void sendMessage(SlackMessageLevel messageLevel) {
+    public void sendMessage(String text) {
         Slack slack = Slack.getInstance();
-        String webhookUrl = getWebHookUrl(messageLevel);
-        System.out.println("webhookUrl = " + webhookUrl);
 
         Payload payload = Payload.builder()
-                .text("Hello World!")
+                .text(text)
+//                .username("Slack WebHook Bot")  // default: incoming-webhook
+//                .iconUrl("https://a.slack-edge.com/80588/img/icons/app-57.png")
+//                .iconUrl("/images/n2soft-logo.png")
+//                .iconEmoji(":ghost:")
                 .build();
 
         try {
-            WebhookResponse response = slack.send(webhookUrl, payload);
+            WebhookResponse response = slack.send(INFO, payload);
             System.out.println(response);
 
         } catch (IOException e) {
             e.printStackTrace();
-        }
-    }
-
-    private String getWebHookUrl(SlackMessageLevel messageLevel) {
-        if (SlackMessageLevel.INFO == messageLevel) {
-            return INFO;
-        } else if (SlackMessageLevel.WARN == messageLevel) {
-            return WARN;
-        } else if (SlackMessageLevel.ERROR == messageLevel) {
-            return ERROR;
-        } else {
-            return "";
         }
     }
 }
