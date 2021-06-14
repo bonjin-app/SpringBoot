@@ -1,0 +1,6 @@
+
+slack:
+  webhook-url:
+    info: https://hooks.slack.com/services/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
+    warn: https://hooks.slack.com/services/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
+    error: https://hooks.slack.com/services/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
