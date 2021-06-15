@@ -5,7 +5,7 @@ import com.slack.api.model.block.LayoutBlock;
 import com.slack.api.model.block.composition.BlockCompositions;
 import com.slack.api.model.block.element.BlockElements;
 
-public class SlackMessage {
+public class SlackMessageBlock {
 
     public static LayoutBlock getHeader(String text) {
         return Blocks.header(h -> h.text(
@@ -39,3 +39,4 @@ public class SlackMessage {
         return Blocks.divider();
     }
 }
+

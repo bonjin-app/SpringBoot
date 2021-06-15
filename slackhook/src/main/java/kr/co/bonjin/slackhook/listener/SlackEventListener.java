@@ -1,5 +1,7 @@
 package kr.co.bonjin.slackhook.listener;
 
+import kr.co.bonjin.slackhook.model.SlackNormalMessage;
+import kr.co.bonjin.slackhook.services.SlackMessage;
 import kr.co.bonjin.slackhook.services.SlackService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -23,13 +25,15 @@ public class SlackEventListener {
     void doSomethingAfterStartup() {
         logger.info("doSomethingAfterStartup");
 
-        slackService.sendMessage("[APPLICATION_STARTED]");
+        SlackMessage slackMessage = new SlackNormalMessage("[APPLICATION_STARTED]");
+        slackService.sendMessage(slackMessage);
     }
 
     @EventListener(ApplicationFailedEvent.class)
     void doSomethingAfterFailure() {
         logger.info("doSomethingAfterFailure");
 
-        slackService.sendMessage("[APPLICATION_FAILED]");
+        SlackMessage slackMessage = new SlackNormalMessage("[APPLICATION_FAILED]");
+        slackService.sendMessage(slackMessage);
     }
 }

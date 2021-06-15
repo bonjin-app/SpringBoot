@@ -1,6 +1,5 @@
 package kr.co.bonjin.slackhook.services;
 
 public interface SlackService {
-
-    void sendMessage(String text);
+    void sendMessage(SlackMessage slackMessage);
 }
