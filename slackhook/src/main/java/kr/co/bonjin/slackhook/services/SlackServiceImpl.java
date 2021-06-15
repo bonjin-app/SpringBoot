@@ -62,7 +62,7 @@ public class SlackServiceImpl implements SlackService {
 //                    .build();
 
             WebhookResponse response = slack.send(WEBHOOK_URL, payload);
-            logger.debug("Webhook Response :{}", response);
+            logger.info("Webhook Response :{}", response);
 
         } catch (IOException e) {
             e.printStackTrace();
