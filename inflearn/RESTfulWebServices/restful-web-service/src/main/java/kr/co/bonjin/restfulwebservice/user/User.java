@@ -24,7 +24,7 @@ import java.util.Date;
 public class User {
 
     @Id
-    @GeneratedValue
+    @GeneratedValue()
     private Long id;
 
     @Size(min = 2, message = "Name은 2글자 이상을 입력해 주세요.")
