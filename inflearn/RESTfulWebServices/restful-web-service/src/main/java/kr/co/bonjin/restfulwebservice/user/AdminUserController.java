@@ -32,7 +32,7 @@ public class AdminUserController {
         }
 
         SimpleBeanPropertyFilter filter = SimpleBeanPropertyFilter
-                .filterOutAllExcept("id", "name", "joinDate", "ssn");
+                .filterOutAllExcept("id", "name", "password", "ssn");
         FilterProvider filterProvider = new SimpleFilterProvider().addFilter("UserInfo", filter);
 
         MappingJacksonValue mapping = new MappingJacksonValue(user);
