@@ -1,4 +1,4 @@
-package kr.co.bonjin.restfulwebservice;
+package kr.co.bonjin.restfulwebservice.helloworld;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;

@@ -1,4 +1,4 @@
-package kr.co.bonjin.restfulwebservice;
+package kr.co.bonjin.restfulwebservice.helloworld;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
