@@ -1,5 +1,6 @@
 package kr.co.bonjin.restfulwebservice.user;
 
+import kr.co.bonjin.restfulwebservice.post.Post;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.hateoas.EntityModel;
 import org.springframework.hateoas.server.mvc.WebMvcLinkBuilder;
@@ -53,5 +54,16 @@ public class UserJpaController {
                 .toUri();
 
         return ResponseEntity.created(uri).build();
+    }
+
+    // http://localhost:8088/jpa/users/101/posts
+    @GetMapping("/users/{id}/posts")
+    public List<Post> retrieveAllPostsByUser(@PathVariable Long id) {
+        Optional<User> user = userRepository.findById(id);
+        if (!user.isPresent()) {
+            throw new UserNotFoundException(String.format("ID[%s] not found", id));
+        }
+
+        return user.get().getPostList();
     }
 }
