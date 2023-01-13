@@ -1,10 +1,10 @@
-package kr.co.bonjin.jsoup;
+package kr.co.bonjin.crawling;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class JsoupApplicationTests {
+class CrawlingApplicationTests {
 
     @Test
     void contextLoads() {
