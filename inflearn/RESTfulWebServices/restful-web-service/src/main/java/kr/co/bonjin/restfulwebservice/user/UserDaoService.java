@@ -21,7 +21,7 @@ public class UserDaoService {
         usersCount = users.size();
     }
 
-    public  List<User> findAll() {
+    public List<User> findAll() {
         return users;
     }
 

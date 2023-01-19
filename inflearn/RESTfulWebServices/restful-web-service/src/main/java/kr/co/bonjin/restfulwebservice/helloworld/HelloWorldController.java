@@ -18,7 +18,7 @@ public class HelloWorldController {
     // GET
     // /hello-world (end point)
     @GetMapping(path = "/hello-world")
-    public  String helloWorld() {
+    public String helloWorld() {
         return "hello world";
     }
 

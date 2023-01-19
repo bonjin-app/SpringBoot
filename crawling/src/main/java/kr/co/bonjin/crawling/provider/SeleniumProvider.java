@@ -32,7 +32,7 @@ public class SeleniumProvider {
         options.addArguments("--no-sandbox");               // Sandbox 프로세스를 사용하지 않음, Linux에서 headless를 사용하는 경우 필요함.
 
         // 3. WebDriver 객체 생성
-        ChromeDriver driver = new ChromeDriver( options );
+        ChromeDriver driver = new ChromeDriver(options);
         return driver;
     }
 }

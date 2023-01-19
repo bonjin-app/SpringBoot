@@ -20,11 +20,11 @@ public class SwaggerConfig {
     private static final Contact DEFAULT_CONTACT = new Contact("GIGAS", "https://bonjin.co.kr", "bonjin.app@gmail.com");
 
     private static final ApiInfo DEFAULT_API_INFO = new ApiInfo("Awesome API Title",
-                                                        "My User management REST API service",
-                                                        "1.0",
-                                                        "urn:tos", DEFAULT_CONTACT,
-                                                        "Apache 2.0",
-                                                        "http://www.apache.org/licenses/LICENSE-2.0", new ArrayList<>());
+            "My User management REST API service",
+            "1.0",
+            "urn:tos", DEFAULT_CONTACT,
+            "Apache 2.0",
+            "http://www.apache.org/licenses/LICENSE-2.0", new ArrayList<>());
 
     private static final Set<String> DEFAULT_PRODUCES_AND_CONSUMES = new HashSet<>(Arrays.asList("application/json", "application/xml"));
 

@@ -18,7 +18,8 @@ public class SlackServiceImpl implements SlackService {
     @Value("${slack.webhook-url}")
     private String WEBHOOK_URL;
 
-    public SlackServiceImpl() {}
+    public SlackServiceImpl() {
+    }
 
     @PostConstruct
     public void init() {

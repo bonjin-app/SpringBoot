@@ -24,6 +24,7 @@ public class EmailProvider {
 
     /**
      * Mail 전송 함수
+     *
      * @param to
      * @param subject
      * @param value
@@ -46,6 +47,7 @@ public class EmailProvider {
 
     /**
      * Thymeleaf 셋팅
+     *
      * @return
      */
     private String build(String value, String template) {

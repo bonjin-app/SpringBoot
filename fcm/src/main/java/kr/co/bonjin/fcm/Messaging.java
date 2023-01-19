@@ -23,7 +23,7 @@ public class Messaging {
     private static final String FCM_SEND_ENDPOINT = "/v1/projects/" + PROJECT_ID + "/messages:send";
 
     private static final String MESSAGING_SCOPE = "https://www.googleapis.com/auth/firebase.messaging";
-    private static final String[] SCOPES = { MESSAGING_SCOPE };
+    private static final String[] SCOPES = {MESSAGING_SCOPE};
 
     private static final String TITLE = "FCM Notification";
     private static final String BODY = "Notification from FCM";
