@@ -26,9 +26,9 @@ public class SlackErrorMessage implements SlackMessage {
         blockList.add(SlackMessageBlock.getDivider());
         blockList.add(SlackMessageBlock.getSection("*ERROR*"));
         blockList.add(SlackMessageBlock.getSection(
-                   "*Type:* " + this.error.getCode() + " Error\n" +
+                "*Type:* " + this.error.getCode() + " Error\n" +
                         "*Comments:* " + this.error.getMessage(),
-                        this.imageUrl, "image"));
+                this.imageUrl, "image"));
         blockList.add(SlackMessageBlock.getDivider());
 
         Payload payload = Payload.builder()

@@ -33,7 +33,7 @@ public class AdminUserController {
         return mapping;
     }
 
-//    @GetMapping(path = "/v1/users/{id}")
+    //    @GetMapping(path = "/v1/users/{id}")
 //    @GetMapping(value = "/users/{id}/", params = "version=1")
 //    @GetMapping(value = "/users/{id}", headers = "X-API-VERSION=1")
     @GetMapping(value = "/users/{id}", produces = "application/vnd.company.appv1+json")
@@ -54,7 +54,7 @@ public class AdminUserController {
         return mapping;
     }
 
-//    @GetMapping(path = "/v2/users/{id}")
+    //    @GetMapping(path = "/v2/users/{id}")
 //    @GetMapping(value = "/users/{id}/", params = "version=2")
 //    @GetMapping(value = "/users/{id}", headers = "X-API-VERSION=2")
     @GetMapping(value = "/users/{id}", produces = "application/vnd.company.appv2+json")

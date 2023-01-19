@@ -11,8 +11,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class JsoupProvider {
+    public static void runNews(String url) {
+    }
 
-    public static void run(String url) {
+    public static void runEvent(String url) {
+    }
+
+    public static void runPolicy(String url) {
         int rows = 15;
         int page = 42;
 
@@ -22,11 +27,12 @@ public class JsoupProvider {
             Document document;
             try {
                 document = conn.get();
-                if(isEmpty(document)) {
+
+                if (isEmpty(document)) {
                     break;
-                } else {
-                    page++;
                 }
+
+                page++;
 
                 List<String> head = getHead(document);
                 List<List<String>> body = getBody(document);
@@ -37,6 +43,8 @@ public class JsoupProvider {
 
             } catch (IOException e) {
                 e.printStackTrace();
+            } finally {
+
             }
         }
     }
@@ -63,7 +71,7 @@ public class JsoupProvider {
         for (Element select : selects) {
             List<String> _items = new ArrayList<>();
             select.select("td").forEach(e -> {
-                if(!e.select("a").isEmpty()) {
+                if (!e.select("a").isEmpty()) {
                     var href = e.select("a").attr("href");
                     var text = e.select("a").html();
                     _items.add(text);

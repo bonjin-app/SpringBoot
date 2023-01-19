@@ -18,7 +18,7 @@ public class Post {
     @GeneratedValue
     private Long id;
 
-    private  String description;
+    private String description;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JsonIgnore

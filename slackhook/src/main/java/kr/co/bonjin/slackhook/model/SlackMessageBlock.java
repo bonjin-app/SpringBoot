@@ -19,7 +19,7 @@ public class SlackMessageBlock {
     public static LayoutBlock getSection(String text) {
         return Blocks.section(s ->
                 s.text(
-                    BlockCompositions.markdownText(text)
+                        BlockCompositions.markdownText(text)
                 )
         );
     }
@@ -30,7 +30,7 @@ public class SlackMessageBlock {
                         BlockCompositions.markdownText(text)
                 ).accessory(BlockElements.imageElement(i ->
                         i.imageUrl(imageUrl)
-                        .altText(altText)
+                                .altText(altText)
                 ))
         );
     }

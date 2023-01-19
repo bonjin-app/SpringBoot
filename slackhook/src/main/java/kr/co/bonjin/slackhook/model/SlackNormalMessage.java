@@ -14,11 +14,11 @@ public class SlackNormalMessage implements SlackMessage {
     @Override
     public Payload getPayload() {
         Payload payload = Payload.builder()
-        .text(this.text)
+                .text(this.text)
 //        .username("Slack WebHook Bot")  // default: 웹 설정값
 //        .iconUrl("https://bonjin.co.kr/bonjin/images/sample.png")  // default: 웹 설정값
 //        .iconEmoji(":ghost:")
-        .build();
+                .build();
         return payload;
     }
 }

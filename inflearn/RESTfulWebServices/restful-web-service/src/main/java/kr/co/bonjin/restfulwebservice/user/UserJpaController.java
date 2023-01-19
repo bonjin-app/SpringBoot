@@ -30,7 +30,7 @@ public class UserJpaController {
     }
 
     @GetMapping(path = "/users/{id}")
-    public EntityModel<User>  retrieveUser(@PathVariable Long id) {
+    public EntityModel<User> retrieveUser(@PathVariable Long id) {
         Optional<User> user = userRepository.findById(id);
         if (!user.isPresent()) {
             throw new UserNotFoundException(String.format("ID[%s] not found", id));
