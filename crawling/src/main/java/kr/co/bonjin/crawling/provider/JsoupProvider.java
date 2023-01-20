@@ -1,14 +1,12 @@
 package kr.co.bonjin.crawling.provider;
 
+import kr.co.bonjin.crawling.policy.PolicyDetailCrawler;
 import kr.co.bonjin.crawling.policy.PolicyListCrawler;
 import org.jsoup.Connection;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
-import org.jsoup.nodes.Element;
-import org.jsoup.select.Elements;
 
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
@@ -21,7 +19,7 @@ public class JsoupProvider {
 
     public static void runPolicy(String url) {
         int rows = 15;
-        int page = 52;
+        int page = 53;
 
         while (true) {
             Connection conn = Jsoup.connect(url + "/list.do?rows=" + rows + "&cpage=" + page);
@@ -40,11 +38,11 @@ public class JsoupProvider {
                 List<List<Map<String, String>>> body = PolicyListCrawler.getBody(document);
 
                 for (List<Map<String, String>> items : body) {
-                    System.out.println(items);
                     for (Map<String, String> item: items) {
-                        var link = item.get("상세주소");
+                        var link = item.get("link");
                         if(link != null) {
-                            System.out.println(url + "/" + item.get("상세주소"));
+                            var linkUrl = url + "/" + link;
+                            PolicyDetailCrawler.get(linkUrl);
                         }
                     }
                 }

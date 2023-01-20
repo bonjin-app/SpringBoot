@@ -49,7 +49,7 @@ public class PolicyListCrawler {
                     _items.add(map);
 
                     map = new HashMap<>();
-                    map.put("상세주소", href);
+                    map.put("link", href);
 
                 } else {
                     map.put(head.get(index.get()), e.html());
