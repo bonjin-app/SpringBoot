@@ -21,10 +21,10 @@ public class JsoupProvider {
 
     public static void runPolicy(String url) {
         int rows = 15;
-        int page = 44;
+        int page = 52;
 
         while (true) {
-            Connection conn = Jsoup.connect(url + "?rows=" + rows + "&cpage=" + page);
+            Connection conn = Jsoup.connect(url + "/list.do?rows=" + rows + "&cpage=" + page);
 
             Document document;
             try {
@@ -40,7 +40,13 @@ public class JsoupProvider {
                 List<List<Map<String, String>>> body = PolicyListCrawler.getBody(document);
 
                 for (List<Map<String, String>> items : body) {
-                    System.out.println(items.toString());
+                    System.out.println(items);
+                    for (Map<String, String> item: items) {
+                        var link = item.get("상세주소");
+                        if(link != null) {
+                            System.out.println(url + "/" + item.get("상세주소"));
+                        }
+                    }
                 }
 
             } catch (IOException e) {

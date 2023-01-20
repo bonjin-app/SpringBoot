@@ -10,7 +10,7 @@ class CrawlingApplicationTests {
     @Test
     void contextLoads() {
 
-        JsoupProvider.runPolicy("https://www.bizinfo.go.kr/web/lay1/bbs/S1T122C128/AS/74/list.do");
+        JsoupProvider.runPolicy("https://www.bizinfo.go.kr/web/lay1/bbs/S1T122C128/AS/74");
 //        SeleniumProvider.run("https://www.bizinfo.go.kr/web/lay1/bbs/S1T122C128/AS/74/list.do");
     }
 

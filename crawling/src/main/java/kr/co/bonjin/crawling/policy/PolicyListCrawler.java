@@ -39,12 +39,16 @@ public class PolicyListCrawler {
             List<Map<String, String>> _items = new ArrayList<>();
 
             AtomicInteger index = new AtomicInteger();
+
             select.select("td").forEach(e -> {
                 var map = new HashMap<String, String>();
                 if (!e.select("a").isEmpty()) {
                     var href = e.select("a").attr("href");
                     var text = e.select("a").html();
                     map.put(head.get(index.get()), text);
+                    _items.add(map);
+
+                    map = new HashMap<>();
                     map.put("상세주소", href);
 
                 } else {
