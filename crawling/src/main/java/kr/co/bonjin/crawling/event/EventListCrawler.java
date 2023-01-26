@@ -1,4 +1,4 @@
-package kr.co.bonjin.crawling.policy;
+package kr.co.bonjin.crawling.event;
 
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
@@ -10,7 +10,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.concurrent.atomic.AtomicInteger;
 
-public class PolicyListCrawler {
+public class EventListCrawler {
 
     public static boolean isEmpty(Document document) {
         Elements selects = document.select(".table_Type_1 tbody tr");

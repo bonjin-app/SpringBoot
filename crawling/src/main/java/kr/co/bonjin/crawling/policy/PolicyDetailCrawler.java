@@ -59,8 +59,6 @@ public class PolicyDetailCrawler {
         Elements selects = document.select("#iframe");
         var list = new ArrayList<String>();
 
-        System.out.println(selects);
-
         for (Element select : selects) {
             System.out.println(select.attr("href"));
         }
