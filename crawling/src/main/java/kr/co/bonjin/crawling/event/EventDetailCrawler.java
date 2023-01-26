@@ -1,4 +1,4 @@
-package kr.co.bonjin.crawling.policy;
+package kr.co.bonjin.crawling.event;
 
 import org.jsoup.Connection;
 import org.jsoup.Jsoup;
@@ -12,7 +12,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class PolicyDetailCrawler {
+public class EventDetailCrawler {
 
     public static void get(String url) {
         Connection conn = Jsoup.connect(url);
@@ -40,7 +40,7 @@ public class PolicyDetailCrawler {
             StringBuilder items = new StringBuilder();
 
             for (Element e : select.select("div.txt")) {
-                if(title.equals("사업개요")) {
+                if(title.equals("행사개요")) {
                     if(e.children().size() > 0) {
                         for(Element j: e.children()) {
                             items.append(j.text()).append('\n');

@@ -1,5 +1,6 @@
 package kr.co.bonjin.crawling.provider;
 
+import kr.co.bonjin.crawling.event.EventDetailCrawler;
 import kr.co.bonjin.crawling.event.EventListCrawler;
 import kr.co.bonjin.crawling.policy.PolicyDetailCrawler;
 import kr.co.bonjin.crawling.policy.PolicyListCrawler;
@@ -39,13 +40,13 @@ public class JsoupProvider {
 
                     System.out.println(items);
 
-//                    for (Map<String, String> item: items) {
-//                        var link = item.get("link");
-//                        if(link != null) {
-//                            var linkUrl = url + "/" + link;
-//                            PolicyDetailCrawler.get(linkUrl);
-//                        }
-//                    }
+                    for (Map<String, String> item: items) {
+                        var link = item.get("link");
+                        if(link != null) {
+                            var linkUrl = url + "/" + link;
+                            EventDetailCrawler.get(linkUrl);
+                        }
+                    }
                 }
 
             } catch (IOException e) {
