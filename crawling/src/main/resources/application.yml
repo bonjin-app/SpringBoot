@@ -1,0 +1,38 @@
+server:
+  port: 8080
+
+  error:
+    whitelabel:
+      enabled: false
+
+spring:
+
+  # ===============================
+  # = Spring DataBaes Config - Oracle
+  # ===============================
+  datasource:
+    url: ENC(ODOz7PB1J4Wr1m7mNa5UYptlRTO34jp0GQomv2rCRQgMN8R4BWZLDn1iMnVZNU1FC1s+vrWC+24=)
+    username: ENC(GSxgxVLFV8yY+o5x89o1f9gaclsY6CCd)
+    password: ENC(TmwzZkWYy/JEAff6c/lICtzvLQTwAjaw)
+    driver-class-name: oracle.jdbc.OracleDriver
+
+  # ===============================
+  # = Spring Jpa Config
+  # ===============================
+  jpa:
+    hibernate:
+      ddl-auto: validate
+
+    database-platform: org.hibernate.dialect.Oracle12cDialect
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+        default_batch_fetch_size: 1000
+
+# ===============================
+# = Jasypt config
+# ===============================
+jasypt:
+  encryptor:
+    bean: jasyptStringEncryptor
