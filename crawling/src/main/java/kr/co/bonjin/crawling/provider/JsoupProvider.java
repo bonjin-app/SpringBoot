@@ -2,6 +2,7 @@ package kr.co.bonjin.crawling.provider;
 
 import kr.co.bonjin.crawling.event.EventDetailCrawler;
 import kr.co.bonjin.crawling.event.EventListCrawler;
+import kr.co.bonjin.crawling.news.NewsListCrawler;
 import kr.co.bonjin.crawling.policy.PolicyDetailCrawler;
 import kr.co.bonjin.crawling.policy.PolicyListCrawler;
 import org.jsoup.Connection;
@@ -14,6 +15,35 @@ import java.util.Map;
 
 public class JsoupProvider {
     public static void runNews(String url) {
+        int rows = 15;
+        int page = 8;
+
+        while (true) {
+            Connection conn = Jsoup.connect(url + "/list.do?rows=" + rows + "&cpage=" + page);
+
+            Document document;
+            try {
+                document = conn.get();
+
+                if (NewsListCrawler.isEmpty(document)) {
+                    break;
+                }
+
+                page++;
+
+                List<List<Map<String, String>>> body = NewsListCrawler.getBody(document);
+
+                for (List<Map<String, String>> items : body) {
+
+
+                }
+
+            } catch (IOException e) {
+                e.printStackTrace();
+            } finally {
+
+            }
+        }
     }
 
     public static void runEvent(String url) {
