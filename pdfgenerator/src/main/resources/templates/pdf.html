@@ -193,7 +193,10 @@
     window.jsPDF = window.jspdf.jsPDF
 
     const save = () => {
-        html2canvas(document.body).then(canvas => {
+        html2canvas(document.body, {
+            allowTaint: true,
+            useCORS: true,
+        }).then(canvas => {
                 // 캔버스를 이미지로 변환
                 var imgData = canvas.toDataURL('image/png');
 
