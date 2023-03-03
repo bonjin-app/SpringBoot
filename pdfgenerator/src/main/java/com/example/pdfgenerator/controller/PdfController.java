@@ -24,6 +24,11 @@ public class PdfController {
         return "index";
     }
 
+    @GetMapping("/pdf")
+    public String pdfPage() {
+        return "pdf";
+    }
+
     @PostMapping("/generatePdfFile")
     public void generatePdfFile(HttpServletResponse response, String contentToGenerate) throws IOException {
         ByteArrayInputStream byteArrayInputStream = pdfService.convertHtmlToPdf(contentToGenerate);
